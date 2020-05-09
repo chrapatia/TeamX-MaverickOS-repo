@@ -11,12 +11,12 @@ window/ dockWindow
     .parameters = "TYPE:4 CTN:1 BORD:0"
     .px = "%posx%"
     .py = "%posy%"
-    .tx = "300"
-    .ty = "100"
+    .sx = "300"
+    .sy = "100"
     .WindowColor = "000,000,000"
     .BackColor = "198,198,198"
     .TitleColor = "000,000,000"
-    .ImgTitle = ""
+    .ImgTitre = ""
     .Icon = ""
     @#dock_ref create/
 end/ window
