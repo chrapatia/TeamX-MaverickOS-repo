@@ -1,3 +1,24 @@
 // dock code
 
 
+set/ posx = /C(%CPC.SCR.X% - 300) / 2
+
+set/ posy = /C(%CPC.SCR.Y% - 100)
+
+
+window/ dockWindow
+    .title = ""
+    .parameters = "TYPE:4 CTN:1 BORD:0"
+    .px = "%posx%"
+    .py = "%posy%"
+    .tx = "300"
+    .ty = "100"
+    .WindowColor = "000,000,000"
+    .BackColor = "198,198,198"
+    .TitleColor = "000,000,000"
+    .ImgTitle = ""
+    .Icon = ""
+    @#dock_ref create/
+end/ window
+
+
