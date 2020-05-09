@@ -1,2 +1,2 @@
 # TeamX-MaverickOS-repo
-The MaverickOS repository by TeamX (in association with Chrapati Lagahim, for chrapatiaSHU)
+The open-source MaverickOS repository by TeamX (in association with Chrapati Lagahim, for chrapatiaSHU)
