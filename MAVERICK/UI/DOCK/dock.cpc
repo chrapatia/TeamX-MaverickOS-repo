@@ -49,18 +49,39 @@ button/ testdockBtn_2
     create/
 end/ button
 
-button/ testdockBtn_3
+button/ menudockBtn
     .handle = "%dock_ref%"
     .parameters = "IMGAUTO:0"
     .px = "0"
     .py = "0"
     .sx = "100"
     .sy = "300"
-    .text = "Test 3"
-    .BackColor = "198,198,198"
+    .text = "Menu"
+    .BackColor = "235,154,003"
     .TextColor = "000,000,000"
     .event = "%_exe_path_%"
     create/
 end/ button
+
+function/ menudockBtn.mouseclick()
+    //Create a menu.
+
+    window/ menuWindow
+    .title = ""
+    .parameters = "TYPE:4 CTN:1 BORD:0"
+    .px = "0"
+    .py = "0"
+    .sx = "500"
+    .sy = "500"
+    .WindowColor = "000,000,000"
+    .BackColor = "006,087,141"
+    .TitleColor = "000,000,000"
+    .ImgTitre = ""
+    .Icon = ""
+    @#menu_ref create/
+    end/ window
+
+end/ function
+
 
 
