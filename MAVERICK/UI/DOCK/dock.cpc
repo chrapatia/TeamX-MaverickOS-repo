@@ -64,22 +64,8 @@ button/ menudockBtn
 end/ button
 
 function/ menudockBtn.mouseclick()
-    //Create a menu.
 
-    window/ menuWindow
-    .title = ""
-    .parameters = "TYPE:4 CTN:1 BORD:0"
-    .px = "0"
-    .py = "0"
-    .sx = "%CPC.SCR.X%"
-    .sy = "%posy%"
-    .WindowColor = "000,000,000"
-    .BackColor = "008,044,068"
-    .TitleColor = "000,000,000"
-    .ImgTitre = ""
-    .Icon = ""
-    @#menu_ref create/
-    end/ window
+    exe/ & OS/MARVERICK/SYSAPPS/MENU/menu.cpc
 
 end/ function
 
