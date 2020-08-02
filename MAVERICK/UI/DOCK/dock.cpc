@@ -65,7 +65,7 @@ end/ button
 
 function/ menudockBtn.mouseclick()
 
-    exe/ & OS/MARVERICK/SYSAPPS/MENU/menu.cpc
+    exe/ & OS/MAVERICK/SYSAPPS/MENU/menu.cpc
 
 end/ function
 
