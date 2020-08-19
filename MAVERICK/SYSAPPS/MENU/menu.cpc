@@ -18,7 +18,7 @@ button/ npbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
     .px = "15"
-    .py = "15"
+    .py = "35"
     .sx = "100"
     .sy = "50"
     .text = "Notepad"
