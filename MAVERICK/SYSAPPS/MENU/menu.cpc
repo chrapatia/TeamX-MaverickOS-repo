@@ -45,7 +45,7 @@ end/ button
 button/ trmbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
-    .px = "235"
+    .px = "260"
     .py = "35"
     .sx = "100"
     .sy = "50"
@@ -56,15 +56,15 @@ button/ trmbutton
     create/
 end/ button
 
-button/ mbcbutton
+button/ mkbscbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
-    .px = "345"
+    .px = "370"
     .py = "35"
-    .sx = "135"
+    .sx = "125"
     .sy = "50"
     .text = "MakeBasic"
-    .BackColor = "235,231,000"
+    .BackColor = "251,255,000"
     .TextColor = "000,000,000"
     .event = "%_exe_path_%"
     create/
@@ -91,11 +91,11 @@ function/ trmbutton.mouseClick()
 
 end/ function
 
-function/ mbcbutton.mouseClick()
+function/ mkbscbutton.mouseClick()
     
-    exe/ & OS/MAVERICK/SYSAPPS/MKBSC/mbc.cpc
-    close/ menuWindow
-    iug/ /CONSOLE
+    exe/ & OS/MAVERICK/SYSAPPS/MKBSC/mbc.CPC
+    GUI/ /CONSOLE
 
 end/ function
+
 

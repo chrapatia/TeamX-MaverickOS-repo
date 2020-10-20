@@ -11,6 +11,8 @@ window/ Sidebar
 	@#side create/
 end/ window
 
+fix/ stkntcnt = \#NULL
+
 textblock/ date_side
 	.handle			= "%side%"
 	.parameters		= "COL:1 UPD:1"
@@ -36,17 +38,3 @@ textblock/ time_side
 	.TextColor		= "255,255,255"
 	create/
 end/ textblock
-
-textblock/ text_trstn
-	.handle			= "%side%"
-	.parameters		= "COL:0"
-	.text			= "________________"
-	.px				= "15"
-	.py				= "25"
-	.sx 			= "100"
-	.sy				= "10"
-	.BackColor		= "034,044,058"
-	.TextColor		= "255,255,255"
-	create/
-end/ textblock
-
