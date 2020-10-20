@@ -1,6 +1,11 @@
+//Code by iPlux(TeamX)
+
+//Create variables
 set/ content = \#NULL
 set/ filename = C:/CPCDOS/OS/MAVERICK/Untitled.txt
 
+
+//Creates a window
 window/ Notepad
     .title			= "Notepad"
 	.sx 			= "600"
@@ -17,6 +22,7 @@ window/ Notepad
 	@#note create/
 end/ window
 
+//Creates the UI
 textbox/ zone_txt
     .handle			= "%note%"
 	.parameters 	= "EDIT:1 COL:1 MULTILINES:1"
@@ -81,6 +87,8 @@ textbox/ file_data
 	create/
 end/ textbox
 
+
+//Events
 function/ zone_txt.KeyPress()
 
 	if/ "%KeyPress%" = " " then:
