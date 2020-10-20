@@ -1,0 +1,52 @@
+window/ Sidebar
+    .px				= "0"
+	.py 			= "0"
+	.sx 			= "150"
+	.sy             = "%CPC.SCR.Y%"
+	.parameters 	= "TYPE:4 CTN:1 BORD:0"
+	.WindowColor	= "034,044,058"
+	.TitleColor 	= "255,255,255"
+	.BackColor  	= "034,044,058"
+	.event 			= ""
+	@#side create/
+end/ window
+
+textblock/ date_side
+	.handle			= "%side%"
+	.parameters		= "COL:1 UPD:1"
+	.text			= "${CPC.DATE}"
+	.px				= "35"
+	.py				= "17"
+	.sx 			= "100"
+	.sy				= "10"
+	.BackColor		= "034,044,058"
+	.TextColor		= "255,255,255"
+	create/
+end/ textblock
+
+textblock/ time_side
+	.handle			= "%side%"
+	.parameters		= "COL:1 UPD:1"
+	.text			= "${CPC.TIME}"
+	.px				= "51"
+	.py				= "6"
+	.sx 			= "100"
+	.sy				= "10"
+	.BackColor		= "034,044,058"
+	.TextColor		= "255,255,255"
+	create/
+end/ textblock
+
+textblock/ text_trstn
+	.handle			= "%side%"
+	.parameters		= "COL:0"
+	.text			= "________________"
+	.px				= "15"
+	.py				= "25"
+	.sx 			= "100"
+	.sy				= "10"
+	.BackColor		= "034,044,058"
+	.TextColor		= "255,255,255"
+	create/
+end/ textblock
+
