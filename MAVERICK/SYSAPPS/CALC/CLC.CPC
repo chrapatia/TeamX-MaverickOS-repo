@@ -1,0 +1,535 @@
+fix/ data = \#NULL
+
+window/ calc
+    .title = "Calculator"
+    .parameters = "TYPE:0"
+    .BackColor = "030,030,030"
+    .WindowColor = "050,050,050"
+    .TitleColor = "255,255,255"
+    .ImgTitre = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUL.PNG"
+    .px	= "560"
+    .py = "250"
+    .sx = "260"
+    .sy = "210"
+    @#calc create/
+end/ window
+
+textbox/ calc_zone
+    .handle = "%calc%"
+    .parameters = "EDIT:0 COL:1"
+    .px = "9"
+    .py = "10"
+    .sx = "245"
+    .sy = "17"
+    .BackColor = "223,223,223"
+    .TextColor = "000,000,000"
+    .text = "%data%"
+    .event = "%_exe_path_%"
+    create/
+end/ textbox
+
+button/ btn_1
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "10"
+    .py = "40"
+    .sx = "40"
+    .sy = "30"
+    .text = "1"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_1.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%1"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_2
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "60"
+    .py = "40"
+    .sx = "40"
+    .sy = "30"
+    .text = "2"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_2.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%2"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_3
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "110"
+    .py = "40"
+    .sx = "40"
+    .sy = "30"
+    .text = "3"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_3.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%3"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_4
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "10"
+    .py = "80"
+    .sx = "40"
+    .sy = "30"
+    .text = "4"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_4.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%4"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_5
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "60"
+    .py = "80"
+    .sx = "40"
+    .sy = "30"
+    .text = "5"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_5.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%5"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_6
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "110"
+    .py = "80"
+    .sx = "40"
+    .sy = "30"
+    .text = "6"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_6.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%6"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_6
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "110"
+    .py = "80"
+    .sx = "40"
+    .sy = "30"
+    .text = "6"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_6.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%6"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_7
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "10"
+    .py = "120"
+    .sx = "40"
+    .sy = "30"
+    .text = "7"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_7.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%7"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_8
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "60"
+    .py = "120"
+    .sx = "40"
+    .sy = "30"
+    .text = "8"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_8.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%8"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_9
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "110"
+    .py = "120"
+    .sx = "40"
+    .sy = "30"
+    .text = "9"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_9.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%9"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_nbp
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "10"
+    .py = "160"
+    .sx = "40"
+    .sy = "30"
+    .text = "."
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_nbp.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%."
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_0
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "60"
+    .py = "160"
+    .sx = "40"
+    .sy = "30"
+    .text = "0"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_0.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data%0"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_cl
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "160"
+    .py = "40"
+    .sx = "40"
+    .sy = "30"
+    .text = "C"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_cl.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = ""
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_plu
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "210"
+    .py = "40"
+    .sx = "40"
+    .sy = "30"
+    .text = "+"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_plu.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% + "
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_minus
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "210"
+    .py = "120"
+    .sx = "40"
+    .sy = "30"
+    .text = "-"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_minus.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% - "
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_div
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "210"
+    .py = "160"
+    .sx = "40"
+    .sy = "30"
+    .text = "/"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_div.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% / "
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_mul
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "210"
+    .py = "80"
+    .sx = "40"
+    .sy = "30"
+    .text = "*"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_mul.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% * "
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_par1
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "160"
+    .py = "80"
+    .sx = "40"
+    .sy = "30"
+    .text = "("
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_par1.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% ("
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_par2
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "160"
+    .py = "120"
+    .sx = "40"
+    .sy = "30"
+    .text = ")"
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_par2.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% )"
+        create/
+    end/ textbox
+
+end/ function
+
+button/ btn_eq
+    .handle = "%calc%"
+    .parameters = "IMGAUTO:2"
+    .px = "110"
+    .py = "160"
+    .sx = "40"
+    .sy = "30"
+    .text = "="
+    .image = "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUE.PNG"
+    .event = "%_exe_path_%=Click"
+    .BackColor = "070,070,070"
+    .TextColor = "255,255,255"
+    create/
+end/ button
+
+function/ btn_eq.Click()
+    
+    textbox/ /modif:calc_zone
+        @#data .text
+    end/ textbox
+
+    fix/ result1 = /C(%data%)
+
+    textbox/ /modif:calc_zone
+        @#data .text
+        .text = "%data% = %result1%"
+        create/
+    end/ textbox
+
+end/ function

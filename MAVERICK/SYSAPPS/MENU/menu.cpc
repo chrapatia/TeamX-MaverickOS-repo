@@ -18,11 +18,53 @@ button/ npbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
     .px = "15"
-    .py = "15"
+    .py = "35"
     .sx = "100"
     .sy = "50"
     .text = "Notepad"
     .BackColor = "044,094,231"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
+
+button/ clcbutton
+    .handle = "%menu_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "125"
+    .py = "35"
+    .sx = "125"
+    .sy = "50"
+    .text = "Calculator"
+    .BackColor = "255,158,030"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
+
+button/ trmbutton
+    .handle = "%menu_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "235"
+    .py = "35"
+    .sx = "100"
+    .sy = "50"
+    .text = "Terminal"
+    .BackColor = "006,202,033"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
+
+button/ mbcbutton
+    .handle = "%menu_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "345"
+    .py = "35"
+    .sx = "135"
+    .sy = "50"
+    .text = "MakeBasic"
+    .BackColor = "235,231,000"
     .TextColor = "000,000,000"
     .event = "%_exe_path_%"
     create/
@@ -35,4 +77,25 @@ function/ npbutton.mouseClick()
 
 end/ function
 
+function/ clcbutton.mouseClick()
+    
+    exe/ & OS/MAVERICK/SYSAPPS/CALC/clc.cpc
+    close/ menuWindow
+
+end/ function
+
+function/ trmbutton.mouseClick()
+    
+    exe/ & OS/MAVERICK/SYSAPPS/TERM/trmnl.cpc
+    close/ menuWindow
+
+end/ function
+
+function/ mbcbutton.mouseClick()
+    
+    exe/ & OS/MAVERICK/SYSAPPS/MKBSC/mbc.cpc
+    close/ menuWindow
+    iug/ /CONSOLE
+
+end/ function
 

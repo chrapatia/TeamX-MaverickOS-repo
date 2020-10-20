@@ -1,34 +1,137 @@
-//Notepad
-
-close/ menuWindow
-
-set/ Contenu = \#NULL
+set/ content = \#NULL
+set/ filename = C:/CPCDOS/OS/MAVERICK/Untitled.txt
 
 window/ Notepad
-    .title = "Notepad"
-    .px				= "100"
-	.py 			= "100"
+    .title			= "Notepad"
 	.sx 			= "600"
 	.sy             = "500"
+	.px				= "560"
+	.py				= "300"
 	// .opacity 	= "100"
 	.parameters 	= "TYPE:0"
-	.WindowColor	= "050,070,100"
+	.WindowColor	= "048,048,048"
 	.TitleColor 	= "255,255,255"
-	.BackColor  	= "086,097,250"
-	.event = ""
+	.BackColor  	= "048,048,048"
+	.ImgTitre		= "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUL.PNG"
+	.event 			= ""
 	@#note create/
 end/ window
 
-textbox/ text_zone
+textbox/ zone_txt
     .handle			= "%note%"
 	.parameters 	= "EDIT:1 COL:1 MULTILINES:1"
 	.PX				= "0"
 	.PY				= "0"
 	.sx				= "600"
-	.sy				= "478"
-	.BackColor  	= "020,020,020"
-	.TitleColor 	= "255,255,255"
-    .texte          = "%content%"
+	.sy				= "465"
+	.BackColor  	= "030,030,030"
+	.TextColor		= "255,255,255"
+    .text          = "%content%"
 	.event			= "%_exe_path_%"
     create/
 end/ textbox
+
+button/ btn_save
+	.handle			= "%note%"
+	.px				= "0"
+	.py				= "465"
+	.sx				= "60"
+	.sy				= "35"
+	// .opacity 	= "100"
+	.text			= "Save"
+	.event			= "%_exe_path_%"
+	create/
+end/ button
+
+button/ btn_new
+	.handle			= "%note%"
+	.px				= "60"
+	.py				= "465"
+	.sx				= "45"
+	.sy				= "35"
+	// .opacity 	= "100"
+	.text			= "New"
+	.event			= "%_exe_path_%"
+	create/
+end/ button
+
+button/ btn_open
+	.handle			= "%note%"
+	.px				= "105"
+	.py				= "465"
+	.sx				= "50"
+	.sy				= "35"
+	// .opacity 	= "100"
+	.text			= "Open"
+	.event			= "%_exe_path_%"
+	create/
+end/ button
+
+textbox/ file_data
+	.handle			= "%note%"
+	.parametres 	= "EDIT:1 COL:1"
+	.px				= "155"
+	.py				= "465"
+	.sx				= "445"
+	.sy				= "35"
+	.BackColor		= "020,020,020"
+	.TextColor		= "255,255,255"
+	.text			= "%filename%"
+	.event			= "%_exe_path_%"
+	create/
+end/ textbox
+
+function/ zone_txt.KeyPress()
+
+	if/ "%KeyPress%" = " " then:
+
+		textbox/ /modif:zone_txt
+			@#content .text
+			.text = ""
+			create/
+		end/ textbox
+
+	end/ if
+
+end/ function
+
+function/ btn_save.MouseClick()
+	
+	textbox/ /modif:file_data
+		@#filename .text
+	end/ textbox
+
+	textbox/ /modif:zone_txt
+		@#content .text
+	end/ textbox
+
+	write/ %filename% = %content%
+
+	msgbox/ Text saved succefully! /title: MaverickOS /error:1 /type:0
+
+end/ function
+
+function/ btn_new.MouseClick(arg1)
+	
+	textbox/ /modif:zone_txt
+		@#content .text
+		.text = ""
+		create/
+	end/ textbox
+
+end/ function
+
+function/ btn_open.MouseClick()
+
+	textbox/ /modif:file_data
+		@#filename .text
+	end/ textbox
+
+	@#content open/ %filename%
+
+	textbox/ /modif:zone_txt
+		.text "%content%"
+		create/
+	end/ textbox
+
+end/ function

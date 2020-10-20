@@ -1,0 +1,57 @@
+:INTRO:
+CouleurC/ 2
+txt/  =====================================
+txt/  |              LOADING              |
+txt/  =_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
+txt/  =====================================
+txt/  |             MakeBasic             |
+txt/  |          TeamX (c)  2020          |
+txt/  =====================================
+txt/  Type /exit to exit MakeBasic.
+
+:COMMAND:
+fix/ PROMPT = MKBSC/>
+txt/ %PROMPT% /#R
+fix/ /Q COM
+fix/ VERSION = 0.1
+
+
+
+if/ "%COM%" ~= "/SHOW" then:
+fix/ poscmd = /f:CPC.INSTR(%COM%,SHOW)
+    /f:CPC.TAILLE(%COM%)
+    fix/ argslen = /C(%COM% - 4)
+if/ "%poscmd%" > "0" then:
+    fix/ poscmd = /C(%poscmd% + %argslen%)
+    fix/ args = /F:CPC.MID(%COM%,%poscmd%)
+    end/ if
+    txt/ %args%
+    fix/ /s COM
+    fix/ /s poscmd
+    fix/ /s args
+aller/ COMMAND
+end/ if
+
+if/ "%COM%" == "/CLS" then:
+cls/
+aller/ COMMAND
+end/ if
+
+if/ "%COM%" == "/HELP" then:
+txt/ Showing the commands.
+txt/ /SHOW (Args)
+txt/ /CLS (Clear the screen)
+txt/ /EXIT (Exit MakeBasic)
+txt/ /VERSION (Shows MakeBasic version)
+aller/ COMMAND
+end/ if
+
+if/ "%COM%" == "/EXIT" then:
+sys/ /os:MAVERICK
+iug/
+end/ if
+
+if/ "%COM%" == "/VERSION" then:
+txt/ MakeBasic version: %VERSION%
+aller/ INTRO
+end/ if
