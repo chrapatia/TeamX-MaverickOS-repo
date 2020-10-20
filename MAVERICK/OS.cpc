@@ -2,7 +2,6 @@
 
 // CREATED ON 03/23/2020 | MODIFIED ON 05/09/2020
 
-
 ccp/ /set.level = 4
 
 set/ os_name = MaverickOS
@@ -14,7 +13,6 @@ set/ os_version_patch = 0
 set/ os_development_statement = Alpha
 
 // Graphic Environment
-
 exe/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/env_gui.cpc
 set/ SCR_BIT = 24
 set/ SCR_RES = 1280x1024
