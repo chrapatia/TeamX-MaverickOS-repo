@@ -3,8 +3,40 @@
 //Set the positions variables
 set/ posx = /C(%CPC.SCR.X% - 300) / 2
 set/ posy = /C(%CPC.SCR.Y% - 100)
+set/ aposy = /C(%posy% - 10)
+set/ aposx = /C(%posx% + 300)
 
-//Create the window
+//Create the windows
+window/ left_dockWindow
+    .title = ""
+    .parameters = "TYPE:4 CTN:1 BORD:0"
+    .px = "0"
+    .py = "%aposy%"
+    .sx = "300"
+    .sy = "90"
+    .WindowColor = "000,000,000"
+    .BackColor = "198,198,198"
+    .TitleColor = "000,000,000"
+    .ImgTitre = ""
+    .Icon = ""
+    @#ldock_ref create/
+end/ window
+
+window/ right_dockWindow
+    .title = ""
+    .parameters = "TYPE:4 CTN:1 BORD:0"
+    .px = "%aposx%"
+    .py = "%aposy%"
+    .sx = "300"
+    .sy = "90"
+    .WindowColor = "000,000,000"
+    .BackColor = "198,198,198"
+    .TitleColor = "000,000,000"
+    .ImgTitre = ""
+    .Icon = ""
+    @#rdock_ref create/
+end/ window
+
 window/ dockWindow
     .title = ""
     .parameters = "TYPE:4 CTN:1 BORD:0"
