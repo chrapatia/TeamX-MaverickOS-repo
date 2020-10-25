@@ -22,7 +22,7 @@ set/ cpc_sys.boot.bootscreen.fps = 5
 
 // [FR] Nombre d'images max
 // [EN] Max number frames
-set/ cpc_sys.boot.bootscreen.size = 20
+set/ cpc_sys.boot.bootscreen.size = 19
 
 
 // [FR] Numero d'image de commencement
