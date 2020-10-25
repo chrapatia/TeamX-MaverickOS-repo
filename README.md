@@ -5,7 +5,7 @@ Based on CPCDOS
 
 |            Compatibility             |
 |--------------------------------------|
-| CPCDOS Beta 1.3 | :white_check_mark: |
-| CPCDOS Beta 1.2 | :white_check_mark: |
-| CPCDOS Beta 1.1 | :x:                |
-| CPCDOS Beta 1.0 | :x:                |
+| CPCDOS Beta 1.3 / Yes|
+| CPCDOS Beta 1.2 / Yes|
+| CPCDOS Beta 1.1 / No|
+| CPCDOS Beta 1.0 / No|
