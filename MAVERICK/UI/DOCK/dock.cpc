@@ -1,21 +1,22 @@
 // dock code
 
-//Set the positions variables
-set/ posx = /C(%CPC.SCR.X% - 300) / 2
+// Set the positions variables
+set/ posx = /C((%CPC.SCR.X% / 2) - (300 / 2))
 set/ posy = /C(%CPC.SCR.Y% - 100)
-set/ aposy = /C(%posy% - 10)
-set/ aposx = /C(%posx% + 300)
+set/ lposx = /C(%posx% - 250)
+set/ rposx = /C(%posx% + 300)
+set/ sposy = /C(%CPC.SCR.Y% - 85)
 
-//Create the windows
+// Create the windows
 window/ left_dockWindow
     .title = ""
     .parameters = "TYPE:4 CTN:1 BORD:0"
-    .px = "0"
-    .py = "%aposy%"
-    .sx = "300"
-    .sy = "90"
+    .px = "%lposx%"
+    .py = "%sposy%"
+    .sx = "250"
+    .sy = "85"
     .WindowColor = "000,000,000"
-    .BackColor = "198,198,198"
+    .BackColor = "141,141,141"
     .TitleColor = "000,000,000"
     .ImgTitre = ""
     .Icon = ""
@@ -25,12 +26,12 @@ end/ window
 window/ right_dockWindow
     .title = ""
     .parameters = "TYPE:4 CTN:1 BORD:0"
-    .px = "%aposx%"
-    .py = "%aposy%"
-    .sx = "300"
-    .sy = "90"
+    .px = "%rposx%"
+    .py = "%sposy%"
+    .sx = "250"
+    .sy = "85"
     .WindowColor = "000,000,000"
-    .BackColor = "198,198,198"
+    .BackColor = "141,141,141"
     .TitleColor = "000,000,000"
     .ImgTitre = ""
     .Icon = ""
@@ -52,7 +53,7 @@ window/ dockWindow
     @#dock_ref create/
 end/ window
 
-//Create the buttons
+// Create the UI (for dock_window)
 button/ testdockBtn_1
     .handle = "%dock_ref%"
     .parameters = "IMGAUTO:0"
@@ -95,7 +96,11 @@ button/ menudockBtn
     create/
 end/ button
 
-//Event (Clicked button)
+// Create the UI (for left_dockwindow)
+
+// Create the UI (for right_dockwindow)
+
+// Event (Clicked button)
 function/ menudockBtn.mouseclick()
 
     exe/ & OS/MAVERICK/SYSAPPS/MENU/menu.cpc

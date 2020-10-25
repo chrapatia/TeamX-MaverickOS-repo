@@ -1,8 +1,9 @@
-// COPYRIGHT (C) 2020 TEAMX.
-
-// CREATED ON 03/23/2020 | MODIFIED ON 05/09/2020
+rem/ COPYRIGHT (C) 2020 TEAMX.
+rem/ CREATED ON 03/23/2020 | MODIFIED ON 10/24/2020
 
 ccp/ /set.level = 4
+
+set/ HOST_OS = OS/MAVERICK
 
 set/ os_name = MaverickOS
 set/ os_author = TeamX
@@ -10,14 +11,22 @@ set/ os_publisher = TeamX
 set/ os_version_major = 1
 set/ os_version_minor = 0
 set/ os_version_patch = 0
-set/ os_development_statement = Alpha
+set/ os_development_statement = Pre-Alpha
 
-// Graphic Environment
+rem/ Graphic Environment
 exe/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/env_gui.cpc
 set/ SCR_BIT = 24
 set/ SCR_RES = 1280x1024
-set/ SCR_IMG = OS/MAVERICK/MEDIA/BCKGRD/DEFAULT.PNG
+set/ SCR_IMG = %HOST_OS%/MEDIA/BCKGRD/DEFAULT.PNG
 iug/
-exe/ & OS/MAVERICK/UI/DOCK/dock.cpc
+exe/ & %HOST_OS%/UI/DOCK/dock.cpc
+
+
+
+
+
+
+
+
 
 
