@@ -18,13 +18,13 @@ button/ npbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
     .px = "15"
-    .py = "35"
+    .py = "15"
     .sx = "100"
     .sy = "50"
     .text = "Notepad"
     .BackColor = "044,094,231"
     .TextColor = "000,000,000"
-    .event = "%_exe_path_%"
+    .event = "%_exe_path_%=mouseClick"
     create/
 end/ button
 
@@ -32,7 +32,7 @@ button/ clcbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
     .px = "125"
-    .py = "35"
+    .py = "15"
     .sx = "125"
     .sy = "50"
     .text = "Calculator"
@@ -42,15 +42,15 @@ button/ clcbutton
     create/
 end/ button
 
-button/ trmbutton
+button/ puzzbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
-    .px = "260"
-    .py = "35"
-    .sx = "100"
+    .px = "263"
+    .py = "15"
+    .sx = "85"
     .sy = "50"
-    .text = "Terminal"
-    .BackColor = "006,202,033"
+    .text = "Puzz"
+    .BackColor = "030,255,161"
     .TextColor = "000,000,000"
     .event = "%_exe_path_%"
     create/
@@ -59,43 +59,46 @@ end/ button
 button/ mkbscbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
-    .px = "370"
-    .py = "35"
-    .sx = "125"
+    .px = "358"
+    .py = "15"
+    .sx = "100"
     .sy = "50"
     .text = "MakeBasic"
-    .BackColor = "251,255,000"
-    .TextColor = "000,000,000"
+    .BackColor = "175,008,008"
+    .TextColor = "255,255,255"
     .event = "%_exe_path_%"
     create/
 end/ button
 
 function/ npbutton.mouseClick()
     
-    exe/ & OS/MAVERICK/SYSAPPS/NOTE/np.cpc
+    exe/ & %HOST_OS%/SYSAPPS/NOTE/NP.CPC
     close/ menuWindow
 
 end/ function
 
 function/ clcbutton.mouseClick()
     
-    exe/ & OS/MAVERICK/SYSAPPS/CALC/clc.cpc
+    exe/ & %HOST_OS%/SYSAPPS/CALC/CLC.CPC
     close/ menuWindow
 
 end/ function
 
-function/ trmbutton.mouseClick()
+function/ puzzbutton.mouseClick()
     
-    exe/ & OS/MAVERICK/SYSAPPS/TERM/trmnl.cpc
+    exe/ & %HOST_OS%/SYSAPPS/GAMES/PUZZ/puzz.cpc
     close/ menuWindow
 
 end/ function
 
 function/ mkbscbutton.mouseClick()
     
-    exe/ & OS/MAVERICK/SYSAPPS/MKBSC/mbc.CPC
-    GUI/ /CONSOLE
+    exe/ & %HOST_OS%/SYSAPPS/MKBSC/mbc.cpc
+    close/ menuWindow
 
 end/ function
+
+
+
 
 

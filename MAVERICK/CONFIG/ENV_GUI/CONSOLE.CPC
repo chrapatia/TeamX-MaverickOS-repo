@@ -1,5 +1,10 @@
+// GUI Console test
+// SPinti Software 
+// 13-OCT-2020
+// Free code!
+
 window/ Console_text
-        .title          = "Terminal"
+        .title          = "CpcdosC+ Shell"
         .px             = "200"
         .py             = "130"
         .sx             = "600"
@@ -8,7 +13,7 @@ window/ Console_text
         .Parameters     = "TYPE:0 ALPHAMODE:0"
 	.WindowColor	= "050,050,100"
         .TitleColor     = "255,255,255"
-        .BackColor      = "037,037,037"
+        .BackColor      = "150,200,255"
         .Icon           = "%OS_GUI%/ICO_DEF.png"
         .events         = "%_EXE_PATH_%"
 	@#Handle_Fenetre creer/
@@ -21,7 +26,7 @@ Textbox/ txt_console
         .py             = "1"
         .tx             = "595"
         .ty             = "395"
-        .BackColor      = "035,035,035"
+        .BackColor      = "150,200,250"
         .TextColor      = "255,255,255"
         .text           = ""
 	Creer/
@@ -29,7 +34,7 @@ end/ Textbox
 
 Function/ Console_text.Resize(up)
 
-        sys/ /debug = 0
+        sys/ /debug = 2
         // [FR] Recuperer la taile X et Y de la fenetre
         // [EN] Getting X, Y window size
         window/ /modif:console_text

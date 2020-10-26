@@ -21,8 +21,8 @@ textbox/ calc_zone
     .py = "10"
     .sx = "245"
     .sy = "17"
-    .BackColor = "223,223,223"
-    .TextColor = "000,000,000"
+    .BackColor = "024,024,024"
+    .TextColor = "255,255,255"
     .text = "%data%"
     .event = "%_exe_path_%"
     create/

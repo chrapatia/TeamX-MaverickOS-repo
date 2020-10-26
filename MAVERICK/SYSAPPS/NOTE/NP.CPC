@@ -1,11 +1,6 @@
-//Code by iPlux(TeamX)
-
-//Create variables
+set/ filename = %HOST_OS%/Untitled.txt
 set/ content = \#NULL
-set/ filename = C:/CPCDOS/OS/MAVERICK/Untitled.txt
 
-
-//Creates a window
 window/ Notepad
     .title			= "Notepad"
 	.sx 			= "600"
@@ -17,12 +12,11 @@ window/ Notepad
 	.WindowColor	= "048,048,048"
 	.TitleColor 	= "255,255,255"
 	.BackColor  	= "048,048,048"
-	.ImgTitre		= "OS\MAVERICK\MEDIA\GUI\BUTTONS\BTN_BLUL.PNG"
+	.ImgTitre		= "%HOST_OS%\MEDIA\GUI\BUTTONS\BTN_BLUL.PNG"
 	.event 			= ""
 	@#note create/
 end/ window
 
-//Creates the UI
 textbox/ zone_txt
     .handle			= "%note%"
 	.parameters 	= "EDIT:1 COL:1 MULTILINES:1"
@@ -87,8 +81,6 @@ textbox/ file_data
 	create/
 end/ textbox
 
-
-//Events
 function/ zone_txt.KeyPress()
 
 	if/ "%KeyPress%" = " " then:
@@ -143,3 +135,6 @@ function/ btn_open.MouseClick()
 	end/ textbox
 
 end/ function
+
+
+

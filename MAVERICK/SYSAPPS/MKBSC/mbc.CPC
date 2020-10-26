@@ -1,3 +1,4 @@
+
 :INTRO:
 CouleurC/ 2
 txt/  =====================================
@@ -15,10 +16,8 @@ txt/ %PROMPT% /#R
 fix/ /Q COM
 fix/ VERSION = 0.1
 
-
-
 if/ "%COM%" ~= "/SHOW" then:
-fix/ poscmd = /f:CPC.INSTR(%COM%,SHOW)
+    fix/ poscmd = /f:CPC.INSTR(%COM%,SHOW)
     /f:CPC.TAILLE(%COM%)
     fix/ argslen = /C(%COM% - 4)
 if/ "%poscmd%" > "0" then:
@@ -33,25 +32,25 @@ aller/ COMMAND
 end/ if
 
 if/ "%COM%" == "/CLS" then:
-cls/
-aller/ COMMAND
+    cls/
+    aller/ COMMAND
 end/ if
 
 if/ "%COM%" == "/HELP" then:
-txt/ Showing the commands.
-txt/ /SHOW (Args)
-txt/ /CLS (Clear the screen)
-txt/ /EXIT (Exit MakeBasic)
-txt/ /VERSION (Shows MakeBasic version)
-aller/ COMMAND
+    txt/ Showing the commands.
+    txt/ /SHOW (Args)
+    txt/ /CLS (Clear the screen)
+    txt/ /EXIT (Exit MakeBasic)
+    txt/ /VERSION (Shows MakeBasic version)
+    aller/ COMMAND
 end/ if
 
 if/ "%COM%" == "/EXIT" then:
-sys/ /os:MAVERICK
-iug/
+    sys/ /os:MAVERICK
+    iug/
 end/ if
 
 if/ "%COM%" == "/VERSION" then:
-txt/ MakeBasic version: %VERSION%
-aller/ INTRO
+    txt/ MakeBasic version: %VERSION%
+    aller/ INTRO
 end/ if
