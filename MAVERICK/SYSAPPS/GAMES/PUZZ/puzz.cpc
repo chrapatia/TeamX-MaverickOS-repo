@@ -19,7 +19,7 @@ imagebox/ playerImg
     .parameters = "COL:1 IMGAUTO:1"
     .px = "0"
     .py = "0"
-    .sx = "10"
+    .sx = "15"
     .sy = "10"
     .BackColor = "105,105,105"
     .image = "%HOST_OS%/MEDIA/GUI/BUTTONS/BTN_GRBL.PNG"
