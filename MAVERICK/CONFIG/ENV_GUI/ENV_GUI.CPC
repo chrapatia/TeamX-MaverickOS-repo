@@ -9,33 +9,55 @@ CCP/ /SET.LEVEL = 3
 
 // [FR] Configuration GUi
 // [EN] GUI configuration
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/gui_std.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/gui_std.cpc
 
 // [FR] Configuration curseurs graphiques
 // [EN] Config graphic cursors
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/cursor.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/cursor.cpc
 
 // [FR] Configuration des fenetres
 // [EN] Window configuration
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/window.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/window.cpc
 
 
 // [FR] Configuration du bouton
 // [EN] Button configuration
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/button.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/button.cpc
 
 // [FR] Configuration du textebox
 // [EN] Textbox configuration
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/txtbox.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/txtbox.cpc
 
 // [FR] Configuration du checkbox
 // [EN] checkbox configuration
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/checkbox.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/checkbox.cpc
+
+// [FR] Configuration de l'explorateur
+// [EN] Explorer configuration
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/explorer.cpc
 
 
 // [FR] Configuration du msgbox
 // [EN] Msgbox configuration
-EXE/ & %HOST_OS%/CONFIG/ENV_GUI/msgbox.cpc
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/msgbox.cpc
+
+
+// [FR] Configuration du menu contextuel
+// [EN] Contextual configuration
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/CONTEXT.cpc
+
+
+// [FR] Configuration du desktop
+// [EN] Desktop configuration
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/DESKTOP.cpc
+
+
+// [FR] Configuration du TaskBar
+// [EN] TaskBar configuration
+EXE/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/TASKBAR.cpc
+
+
+
 
 
 

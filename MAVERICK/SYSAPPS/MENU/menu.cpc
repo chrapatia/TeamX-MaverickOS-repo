@@ -56,14 +56,14 @@ button/ puzzbutton
     create/
 end/ button
 
-button/ mkbscbutton
+button/ cnslbutton
     .handle = "%menu_ref%"
     .parameters = "IMGAUTO:0"
     .px = "358"
     .py = "15"
     .sx = "100"
     .sy = "50"
-    .text = "MakeBasic"
+    .text = "Console"
     .BackColor = "175,008,008"
     .TextColor = "255,255,255"
     .event = "%_exe_path_%"
@@ -91,9 +91,9 @@ function/ puzzbutton.mouseClick()
 
 end/ function
 
-function/ mkbscbutton.mouseClick()
+function/ cnslbutton.mouseClick()
     
-    exe/ & %HOST_OS%/SYSAPPS/MKBSC/mbc.cpc
+    exe/ & %HOST_OS%/SYSAPPS/TERM/TRMNL.cpc
     close/ menuWindow
 
 end/ function
