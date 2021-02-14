@@ -1,43 +1,87 @@
-rem/ COPYRIGHT (C) 2020 TEAMX.
-rem/ CREATED ON 03/23/2020 | MODIFIED ON 10/24/2020
+// COPYRIGHT (C) 2020 TEAMX.
+// CREATED ON 03/23/2020 | MODIFIED ON 02/12/2021
 
-sys/ /os:maverick
+sys/ /os:MAVERICK
 
-ccp/ /set.level = 4
+set/ HOST_OS = OS\MAVERICK
 
-fix/ HOST_OS = OS/MAVERICK
-fix/ GUI_OS = %HOST_OS%/MEDIA/GUI
+// Graphic profile
+exe/ & %HOST_OS%/CONFIG/ENV_GUI/ENV_GUI.CPC
 
-fix/ os_name = MaverickOS
-fix/ os_author = TeamX
-fix/ os_publisher = TeamX
-fix/ os_version_major = 1
-fix/ os_version_minor = 0
-fix/ os_version_patch = 0
-fix/ os_build = 0
-fix/ os_development_statement = Pre-Alpha
+// Background image
+set/ SCR_IMG = %OS_FOLDER%/MEDIA/DEFAULT.PNG
+set/ SCR_RES = 1280x1024
+set/ SCR_BIT = 24
 
-rem/ Graphic Environment
-// exe/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/env_gui.cpc
-exe/ & %HOST_OS%/CONFIG/ENV_GUI/env_gui.cpc
-fix/ SCR_BIT = 24
-fix/ SCR_RES = 1280x1024
-fix/ SCR_IMG = %HOST_OS%/MEDIA/BCKGRD/DEFAULT.PNG
-gui/
+ccp/ /fix.niveau = 4
+
+// **************************************************
+// ** [EN] Operating system informations           **
+// ** [FR] Informations du systeme d'exploitation  **
+// **************************************************
+
+set/ OS_NAME = MaverickOS
+set/ OS_Author = TeamX Software
+set/ OS_Compagny = TeamX
+set/ OS_Created = ?
+set/ OS_Updated = 14/02/2021
+
+
+// ***************************************************
+// ** [EN] Operating system configuration           **
+// ** [FR] Configuration du systeme d'exploitation  **
+// ***************************************************
+
+set/ GUI_OS = %HOST_OS%/MEDIA/GUI
+
+
+// ******************************************************
+// ** [EN] Starting Graphic User Interface             **
+// ** [FR] Demarrer l'interface utilisateur graphique  **
+// ******************************************************
+GUI/
+
+// Load icon on GUI
 sys/ /fileformat-gui-load
 
-// Desktop code
-set/ pos_x_dskt = 0
-set/ pos_y_dskt = 30
-set/ size_x_dskt = %CPC.SCR.X%
-set/ size_y_dskt = %CPC.SCR.Y%
+// ----------------------------------------------------------- //
+//                  ------ C O D E ------                      //
+// ----------------------------------------------------------- //
+
+// Create a new processus
+@#PID_Menu SYS/ /processus _MENUS_
+
+// Create a second processus
 @#PID_APP SYS/ /processus _APP_
-@#PID_MENU SYS/ /processus _MENUS_
-set/ handle_desktop = /F:Init_Desktop(Desktop, ./, %pos_x_dskt%, %pos_y_dskt%, %size_X_dskt%, %size_Y_dskt%)
-CMD/ /PID:%PID_MENU% exe/ & %HOST_OS%/UI/DOCK/dock.cpc
-CMD/ /PID:%PID_APP% exe/ & %HOST_OS%/SYSAPPS/TERM/CONSOLE.CPC
+
+// Create a desktop
+set/ pos_x = 0
+set/ pos_y = 30
+set/ size_x = %CPC.SCR.X%
+set/ size_y = %CPC.SCR.Y%
+
+// Execute desktop function
+set/ handle_desktop = /F:Init_Desktop(MyDesktop, ./, %pos_x%, %pos_y%, %size_X%, %size_Y%)
+
+// Executer barre.CPC dans le processus "_MENUS_" via son PID
+CMD/ /PID:%PID_Menu% exe/ & %HOST_OS%/UI/DOCK/dock.cpc
+CMD/ /PID:%PID_Menu% exe/ & %HOST_OS%/UI/SIDE/sbar.cpc
+
+// Executer app.cpc dans le processus "_APP_" via son PID
+CMD/ /PID:%PID_APP% exe/ & %HOST_OS%/SYSAPPS/EXPLR/EXPLORER.CPC
+CMD/ /PID:%PID_APP% exe/ & %HOST_OS%/SYSAPPS/TERM/console.cpc
+
+rem/ exe/
 
 refresh/ /all
+
+
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-fix/ data = \#NULL
+set/ data = \#NULL
 
 window/ calc
     .title = "Calculator"

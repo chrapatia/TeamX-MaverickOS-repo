@@ -1,13 +1,13 @@
-// dock code
+rem/ dock code
 
-// Set the positions variables
+rem/ set the positions variables
 set/ posx = /C((%CPC.SCR.X% / 2) - (300 / 2))
 set/ posy = /C(%CPC.SCR.Y% - 100)
 set/ lposx = /C(%posx% - 250)
 set/ rposx = /C(%posx% + 300)
 set/ sposy = /C(%CPC.SCR.Y% - 85)
 
-// Create the windows
+rem/ Create the windows
 window/ left_dockWindow
     .title = ""
     .parameters = "TYPE:4 CTN:1 BORD:0"
@@ -53,7 +53,7 @@ window/ dockWindow
     @#dock_ref create/
 end/ window
 
-// Create the UI (for left_dockwindow)
+rem/ Create the UI (for left_dockwindow)
 button/ testldockBtn_1
     .handle = "%ldock_ref%"
     .parameters = "IMGAUTO:0"
@@ -82,9 +82,9 @@ button/ testldockBtn_2
     create/
 end/ button
 
-// Create the UI (for right_dockwindow)
+rem/ Create the UI (for right_dockwindow)
 
-// Create the UI (for dock_window)
+rem/ Create the UI (for dock_window)
 button/ testdockBtn_1
     .handle = "%dock_ref%"
     .parameters = "IMGAUTO:0"
@@ -127,7 +127,7 @@ button/ menudockBtn
     create/
 end/ button
 
-// Event (Clicked button)
+rem/ Event (Clicked button)
 function/ menudockBtn.mouseclick()
 
     exe/ & OS/MAVERICK/SYSAPPS/MENU/menu.cpc

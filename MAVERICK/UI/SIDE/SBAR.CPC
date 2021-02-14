@@ -1,6 +1,6 @@
-// Code by iPlux(TeamX)
+rem/ Code by iPlux(TeamX)
 
-// Create the window
+rem/ Create the window
 window/ Sidebar
     .px				= "0"
 	.py 			= "0"
@@ -14,10 +14,10 @@ window/ Sidebar
 	@#side create/
 end/ window
 
-// Create a variable
-fix/ stkntcnt = \#NULL
+rem/ Create a variable
+set/ stkntcnt = \#NULL
 
-// Create the buttons, textblocks, ect...
+rem/ Create the buttons, textblocks, ect...
 textblock/ date_side
 	.handle			= "%side%"
 	.parameters		= "COL:1 UPD:1"

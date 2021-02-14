@@ -3,11 +3,10 @@
 
 
 CCP/ /SET.LEVEL = 5
-sys/ /debug = 2
 
 // [FR] 0:Desactive / 1:Active  le screen boot
 // [EN] 0:Disable   / 1:Enable  screen boot
-set/ cpc_sys.boot.bootscreen.gui = 0
+set/ cpc_sys.boot.bootscreen.gui = 1
 
 
 // [FR] Resolution d'ecran
