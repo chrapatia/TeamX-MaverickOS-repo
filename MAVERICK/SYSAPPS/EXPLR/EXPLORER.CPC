@@ -1,21 +1,20 @@
 // Explorer GUI program test
 
 
-set/ actual_path = C:\CPCDOS\OS
+set/ actual_path = C:\CPCDOS\OS\MAVERICK
 
 set/ DisplayMode = 0
 
 ccp/ /set.level = 3
-set/ Displaymode_ICO_Path = OS/MEDIA/GUI/btn_ico.PNG
-set/ Displaymode_LIST_Path = OS/MEDIA/GUI/btn_list.PNG
+set/ Displaymode_ICO_Path = OS/MAVERICK/MEDIA/GUI/btn_ico.PNG
+set/ Displaymode_LIST_Path = OS/MAVERICK/MEDIA/GUI/btn_list.PNG
 ccp/ /set.level = 1
 
 
 
 // ===== Build window =====
 Window/ file_explorer_window
-
-        .title          = "File explorer GUi test"
+        .title          = "folder.ly"
         .parameters     = "TYPE:0 SIZ:1 SIZBTN:1"
         .px             = "50"
         .py             = "100"
@@ -26,7 +25,6 @@ Window/ file_explorer_window
         .TitleColor     = "255,200,100"
         .backcolor      = "100,100,100"
         .events         = "%_exe_path_%"
-
         @#window_handle create/
 End/ Window
 
@@ -38,7 +36,7 @@ picturebox/ img_Drive
 	.PY		= "0"
 	.sx		= "22"
 	.sy		= "22"
-	.Image		= "OS/MEDIA/GUI/MDRIVE.PNG"
+	.Image		= "OS/MAVERICK/MEDIA/GUI/MDRIVE.PNG"
 	.opacity	= "255"
         .events         = "%_exe_path_%"
 	create/
@@ -51,7 +49,7 @@ picturebox/ img_Previous
 	.PY		= "4"
 	.sx		= "13"
 	.sy		= "13"
-	.Image		= "OS/MEDIA/GUI/PREV.PNG"
+	.Image		= "OS/MAVERICK/MEDIA/GUI/PREV.PNG"
 	.opacity	= "255"
         .events         = "%_exe_path_%"
 	create/
@@ -64,7 +62,7 @@ picturebox/ img_Next
 	.PY		= "4"
 	.sx		= "13"
 	.sy		= "13"
-	.Image		= "OS/MEDIA/GUI/NEXT.PNG"
+	.Image		= "OS/MAVERICK/MEDIA/GUI/NEXT.PNG"
 	.opacity	= "255"
         .events         = "%_exe_path_%"
 	create/

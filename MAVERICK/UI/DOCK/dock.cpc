@@ -1,4 +1,4 @@
-rem/ dock code
+// dock code
 
 rem/ set the positions variables
 set/ posx = /C((%CPC.SCR.X% / 2) - (300 / 2))
@@ -18,8 +18,8 @@ window/ left_dockWindow
     .WindowColor = "000,000,000"
     .BackColor = "043,043,043"
     .TitleColor = "000,000,000"
-    .ImgTitre = ""
-    .Icon = ""
+    rem/ .ImgTitre = ""
+    rem/ .Icon = ""
     @#ldock_ref create/
 end/ window
 
@@ -33,8 +33,8 @@ window/ right_dockWindow
     .WindowColor = "000,000,000"
     .BackColor = "043,043,043"
     .TitleColor = "000,000,000"
-    .ImgTitre = ""
-    .Icon = ""
+    rem/ .ImgTitre = ""
+    rem/ .Icon = ""
     @#rdock_ref create/
 end/ window
 
@@ -48,8 +48,8 @@ window/ dockWindow
     .WindowColor = "000,000,000"
     .BackColor = "198,198,198"
     .TitleColor = "000,000,000"
-    .ImgTitre = ""
-    .Icon = ""
+    rem/ .ImgTitre = ""
+    rem/ .Icon = ""
     @#dock_ref create/
 end/ window
 
@@ -83,6 +83,33 @@ button/ testldockBtn_2
 end/ button
 
 rem/ Create the UI (for right_dockwindow)
+button/ testldockBtn_1
+    .handle = "%rdock_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "0"
+    .py = "0"
+    .sx = "80"
+    .sy = "85"
+    .text = "C"
+    .BackColor = "198,198,198"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
+
+button/ testldockBtn_2
+    .handle = "%rdock_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "80"
+    .py = "0"
+    .sx = "80"
+    .sy = "85"
+    .text = "D"
+    .BackColor = "198,198,198"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
 
 rem/ Create the UI (for dock_window)
 button/ testdockBtn_1
@@ -133,3 +160,8 @@ function/ menudockBtn.mouseclick()
     exe/ & OS/MAVERICK/SYSAPPS/MENU/menu.cpc
 
 end/ function
+
+
+
+
+

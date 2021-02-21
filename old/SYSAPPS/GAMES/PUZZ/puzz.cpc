@@ -1,0 +1,30 @@
+set/ posx = /C((%CPC.SCR.X% / 2) - 400)
+set/ posy = /C((%CPC.SCR.Y% / 2) - 500)
+
+window/ puzzWindow
+    .title       = "PuzzCPC"
+    .parameters  = "TYPE:0"
+    .BackColor   = "105,105,105"
+    .WindowColor = "201,201,201"
+    .TitleColor  = "255,255,255"
+    .sx          = "400"
+    .sy          = "500"
+    .px          = "%posx%"
+    .py          = "%posy%"
+    @#puzzWin create/ 
+end/ window
+
+imagebox/ playerImg
+    .handle = "%puzzWin%"
+    .parameters = "COL:1 IMGAUTO:1"
+    .px = "0"
+    .py = "0"
+    .sx = "15"
+    .sy = "10"
+    .BackColor = "105,105,105"
+    .image = "%HOST_OS%/MEDIA/GUI/BUTTONS/BTN_GRBL.PNG"
+    .event = "%_exe_path_%"
+    create/
+end/ imagebox
+
+

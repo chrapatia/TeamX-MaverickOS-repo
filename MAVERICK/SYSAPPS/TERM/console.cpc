@@ -3,8 +3,10 @@
 // 13-OCT-2020
 // Free code!
 
+fix/ OS_GUI = OS/MAVERICK/GUI
+
 window/ Console_text
-        .title          = "My first GUI Console test"
+        .title          = "Command Manager"
         .px             = "200"
         .py             = "130"
         .sx             = "600"
@@ -31,7 +33,32 @@ Textbox/ txt_console
 	Creer/
 end/ Textbox
 
+Function/ Console_text.Resize(up)
 
+        sys/ /debug = 0
+        // [FR] Recuperer la taile X et Y de la fenetre
+        // [EN] Getting X, Y window size
+        window/ /modif:Console_text
+                @#Size_X .sx
+                @#Size_Y .sy
+        end/ window
+
+        // [FR] Ajuster la taille de l'objet au pixel pres!
+        // [EN] Ajust size in pixels
+        set/ Size_X = /C(%Size_X% - 2)
+        set/ Size_Y = /C(%size_Y% - %CPC_GUI.WINDOW.TITLE_SY% - 2)
+
+        // [FR] Et y modifier dans le textbox
+        // [EN] And modify on textbox
+        textbox/ /modif:txt_console
+                .sx = "%Size_X%"
+                .sy = "%Size_Y%"
+                create/
+        end/ textbox
+        
+        
+
+End/ function
 
 
 

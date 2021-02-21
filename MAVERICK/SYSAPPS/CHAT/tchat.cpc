@@ -27,14 +27,14 @@ set/ Win_Size_Y = 260
 ccp/ /set.niveau = 2
 
 window/ Tchat_GUI
-	.title				= "T'chat GUI"
+	.title				= "Chaatter"
 	.px					= "240"
 	.py					= "300"
 	.sx					= "%Win_Size_X%"
 	.sy					= "%Win_Size_Y%"
 	.Opacity			= "255"
 	.Parameters			= "TYPE:0 SIZ:0 SIZBTN:0"
-	.WindowColor		= "050,100,100"
+	.WindowColor		= "100,082,050"
 	.TitleColor			= "255,255,255"
 	.BackColor			= "050,150,220"
 	.Icon				= "%OS_GUI%/ICO_DEF.png"

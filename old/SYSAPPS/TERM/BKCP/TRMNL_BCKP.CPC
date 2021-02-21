@@ -1,0 +1,128 @@
+window/ CMD
+    .title = "Terminal"
+    .px = "300"
+    .py = "200"
+    .sx = "535"
+    .sy = "250"
+    .parameters = "TYPE:0"
+    .WindowColor = "068,068,068"
+    .BackColor = "000,000,000"
+    @#CMD_WIN create/
+end/ window
+
+textblock/ version
+    .handle = "%CMD_WIN%"
+    .parameters = "COL:0, BORD:0"
+    .text = "Terminal for MaverickOS NT_1 : 1.0 pre-release"
+    .px = "3"
+    .py = "160"
+    .TextColor = "039,214,048"
+    create/
+end/ textblock
+
+textblock/ version_cpc
+    .handle = "%CMD_WIN%"
+    .parameters = "COL:0, BORD:0"
+    .text = "CPCDOS co-kernel version: 2.1"
+    .px = "3"
+    .py = "170"
+    .TextColor = "255,255,255"
+    create/
+end/ textblock
+
+textblock/ tran_1
+    .handle = "%CMD_WIN%"
+    .parameters = "COL:0, BORD:0"
+    .text = "------------------------"
+    .px = "3"
+    .py = "180"
+    .TextColor = "255,255,255"
+    create/
+end/ textblock
+
+textblock/ mem_cpu
+    .handle = "%CMD_WIN%"
+    .parameters = "COL:0, BORD:0"
+    .text = "Processor: %CPC.SYS.CPU.ACT% %"
+    .px = "3"
+    .py = "190"
+    .TextColor = "039,214,048"
+    create/
+end/ textblock
+
+fix/ CMD = \#NULL
+
+textbox/ zone_cmd
+    .handle = "%CMD_WIN%"
+    .parameters = "EDIT:1 COL:1 MULTILINES:1"
+    .px = "1"
+    .py = "0"
+    .sx = "533"
+    .sy = "14"
+    .BackColor = "000,000,000"
+    .TextColor = "039,214,048"
+    .text = "%CMD%"
+    .event = "%_exe_path_%=KeyPress"
+    create/
+end/ textbox
+
+ccp/ /pause 1000
+
+textblock/ /modif:mem_cpu
+    .py = "240"
+    create/
+end/ textblock
+actualiser/ mem_cpu
+actualiser/ CMD
+
+textblock/ /modif:version_cpc
+    .py = "230"
+    create/
+end/ textblock
+actualiser/ version_cpc
+actualiser/ CMD
+
+textblock/ /modif:version
+    .py = "220"
+    create/
+end/ textblock
+actualiser/ version
+actualiser/ CMD
+
+textbox/ /modif:zone_cmd
+    .BackColor = "000,000,000"
+    .sy = "219"
+    .TextColor = "039,214,048"
+    create/
+end/ textbox
+actualiser/ zone_cmd
+actualiser/ CMD
+
+fix/ mykey = \#NULL
+
+function/ zone_cmd.KeyPress(mykey)
+    
+    if/ "%mykey%" == %CPC.CR% then:
+        textbox/ /modif:zone_cmd
+        @#CMD .text
+    end/ if
+
+end/ function
+
+if/ "%CMD%" == "notepad" then:
+    exe/ & OS/MAVERICK/SYSAPPS/NOTE/NP.CPC
+end/ if
+    
+if/ "%CMD%" == "calc" then:
+    exe/ & OS/MAVERICK/SYSAPPS/CALC/CLC.CPC
+end/ if
+
+cmd/ /thread CCP/ /CHANGE:%CPC.SYS.CPU.ACT%
+    textblock/ /modif:mem_cpu
+        .py = "240"
+        .texte = "Processor: %CPC.SYS.CPU.ACT% %"
+        .TextColor = "039,214,048"
+        create/
+    end/ textblock
+    actualiser/ mem_cpu
+    actualiser/ CMD

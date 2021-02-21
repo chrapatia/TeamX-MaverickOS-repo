@@ -54,3 +54,5 @@ if/ "%COM%" == "/VERSION" then:
     txt/ MakeBasic version: %VERSION%
     aller/ INTRO
 end/ if
+
+

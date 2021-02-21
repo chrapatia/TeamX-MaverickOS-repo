@@ -15,7 +15,7 @@ window/ Sidebar
 end/ window
 
 rem/ Create a variable
-set/ stkntcnt = \#NULL
+set/ sbarnote = \#NULL
 
 rem/ Create the buttons, textblocks, ect...
 textblock/ date_side
@@ -43,3 +43,6 @@ textblock/ time_side
 	.TextColor		= "255,255,255"
 	create/
 end/ textblock
+
+
+

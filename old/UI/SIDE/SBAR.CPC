@@ -1,0 +1,45 @@
+rem/ Code by iPlux(TeamX)
+
+rem/ Create the window
+window/ Sidebar
+    .px				= "0"
+	.py 			= "0"
+	.sx 			= "150"
+	.sy             = "%CPC.SCR.Y%"
+	.parameters 	= "TYPE:4 CTN:1 BORD:0"
+	.WindowColor	= "034,044,058"
+	.TitleColor 	= "255,255,255"
+	.BackColor  	= "034,044,058"
+	.event 			= ""
+	@#side create/
+end/ window
+
+rem/ Create a variable
+set/ stkntcnt = \#NULL
+
+rem/ Create the buttons, textblocks, ect...
+textblock/ date_side
+	.handle			= "%side%"
+	.parameters		= "COL:1 UPD:1"
+	.text			= "${CPC.DATE}"
+	.px				= "35"
+	.py				= "17"
+	.sx 			= "100"
+	.sy				= "10"
+	.BackColor		= "034,044,058"
+	.TextColor		= "255,255,255"
+	create/
+end/ textblock
+
+textblock/ time_side
+	.handle			= "%side%"
+	.parameters		= "COL:1 UPD:1"
+	.text			= "${CPC.TIME}"
+	.px				= "51"
+	.py				= "6"
+	.sx 			= "100"
+	.sy				= "10"
+	.BackColor		= "034,044,058"
+	.TextColor		= "255,255,255"
+	create/
+end/ textblock
