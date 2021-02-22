@@ -1,5 +1,7 @@
-set/ filename = %HOST_OS%/Untitled.txt
-set/ content = \#NULL
+// Code
+
+fix/ filename = %_ARG_1%
+fix/ content = \#NULL
 
 window/ Notepad
     .title			= "Notepad"
@@ -12,7 +14,7 @@ window/ Notepad
 	.WindowColor	= "048,048,048"
 	.TitleColor 	= "255,255,255"
 	.BackColor  	= "048,048,048"
-	.ImgTitre		= "%HOST_OS%\MEDIA\GUI\BUTTONS\BTN_BLUL.PNG"
+	.ImgTitle		= "%HOST_OS%\MEDIA\GUI\BUTTONS\BTN_BLUL.PNG"
 	.event 			= ""
 	@#note create/
 end/ window
@@ -95,7 +97,7 @@ function/ zone_txt.KeyPress()
 
 end/ function
 
-function/ btn_save.MouseClick()
+function/ btn_save.Click()
 	
 	textbox/ /modif:file_data
 		@#filename .text
@@ -111,7 +113,7 @@ function/ btn_save.MouseClick()
 
 end/ function
 
-function/ btn_new.MouseClick(arg1)
+function/ btn_new.Click(arg1)
 	
 	textbox/ /modif:zone_txt
 		@#content .text
@@ -121,7 +123,7 @@ function/ btn_new.MouseClick(arg1)
 
 end/ function
 
-function/ btn_open.MouseClick()
+function/ btn_open.Click()
 
 	textbox/ /modif:file_data
 		@#filename .text
@@ -135,6 +137,8 @@ function/ btn_open.MouseClick()
 	end/ textbox
 
 end/ function
+
+refresh/ /window /focus
 
 
 

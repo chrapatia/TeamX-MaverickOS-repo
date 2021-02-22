@@ -4,7 +4,8 @@
 rem/ sys/ /os:MAVERICK
 
 // Graphic profile
-exe/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/env_gui.cpc
+rem/ exe/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/env_gui.cpc
+exe/ & OS/MAVERICK/CONFIG/ENV_GUI/ENV_GUI.CPC
 
 ccp/ /fix.niveau = 4
 
@@ -13,14 +14,12 @@ set/ MEDIA_OS = %HOST_OS%/MEDIA
 
 set/ GUI_OS = %MEDIA_OS%/GUI
 
-exe/ & %HOST_OS%/CONFIG/ENV_GUI/ENV_GUI.CPC
+rem/ exe/ & %HOST_OS%/CONFIG/ENV_GUI/ENV_GUI.CPC
 
 // Background image
 set/ SCR_IMG = %MEDIA_OS%/BCKGRD/DEFAULT.PNG
 set/ SCR_RES = 1280x1024
 set/ SCR_BIT = 24
-
-
 
 // **************************************************
 // ** [EN] Operating system informations           **
@@ -49,14 +48,24 @@ rem/ set/ pos_y = 30
 rem/ set/ size_x = %CPC.SCR.X%
 rem/ set/ size_y = %CPC.SCR.Y%
 
-// Execute desktop function
-rem/ set/ handle_desktop = /F:Init_Desktop(MyDesktop, ./, %pos_x%, %pos_y%, %size_X%, %size_Y%)
+// Creer un nouveau processus nomme '_MENUS_'
+@#PID_MENU SYS/ /processus _MENUS_
 
-exe/ & %HOST_OS%/UI/DOCK/dock.cpc
-exe/ & %HOST_OS%/UI/SIDE/sbar.cpc
-exe/ & %HOST_OS%/ENV_GUI/DESKTOP.CPC
-exe/ & %HOST_OS%/SYSAPPS/TERM/console.cpc
-exe/ & %HOST_OS%/SYSAPPS/EXPLR/EXPLORER.CPC
+// Creer un 2eme nouveau processus nomme '_APP_'
+@#PID_APP SYS/ /processus _APP_
+
+set/ pos_x = 150
+set/ pos_y = 0
+set/ size_X = /C(%CPC.SCR.X%-150)
+set/ size_Y = /C(%CPC.SCR.Y%-22)
+
+// Execute desktop function
+set/ handle_desktop = /F:Init_Desktop(MyDesktop, OS/MAVERICK/USER/DESKTOP, %pos_x%, %pos_y%, %size_X%, %size_Y%)
+
+CMD/ /PID:%PID_MENU% exe/ & %HOST_OS%/UI/DOCK/dock.cpc
+CMD/ /PID:%PID_MENU% exe/ & %HOST_OS%/UI/SIDE/sbar.cpc
+CMD/ /PID:%PID_APP% exe/ & + %HOST_OS%/SYSAPPS/TERM/console.cpc
+CMD/ /PID:%PID_APP% exe/ & + %HOST_OS%/SYSAPPS/EXPLR/EXPLORER.CPC
 
 rem/ exe/
 

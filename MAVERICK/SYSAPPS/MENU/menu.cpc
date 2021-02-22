@@ -70,28 +70,28 @@ button/ cnslbutton
     create/
 end/ button
 
-function/ npbutton.mouseClick()
+function/ npbutton.Click()
     
     exe/ & %HOST_OS%/SYSAPPS/NOTE/NP.CPC
     close/ menuWindow
 
 end/ function
 
-function/ clcbutton.mouseClick()
+function/ clcbutton.Click()
     
     exe/ & %HOST_OS%/SYSAPPS/CALC/CLC.CPC
     close/ menuWindow
 
 end/ function
 
-function/ puzzbutton.mouseClick()
+function/ puzzbutton.Click()
     
     exe/ & %HOST_OS%/SYSAPPS/GAMES/PUZZ/puzz.cpc
     close/ menuWindow
 
 end/ function
 
-function/ cnslbutton.mouseClick()
+function/ cnslbutton.Click()
     
     exe/ & %HOST_OS%/SYSAPPS/TERM/TRMNL.cpc
     close/ menuWindow

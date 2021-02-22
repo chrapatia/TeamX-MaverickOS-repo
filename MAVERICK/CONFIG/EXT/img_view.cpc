@@ -6,7 +6,7 @@ set/ window_x = 620
 set/ window_y = 480
 
 window/ Img_Viewer
-	.title				= "Img Viewer - %source%"
+	.title				= "ViewIMG - %source%"
 	.px					= "50"
 	.py					= "60"
 	.sx					= "%window_x%"

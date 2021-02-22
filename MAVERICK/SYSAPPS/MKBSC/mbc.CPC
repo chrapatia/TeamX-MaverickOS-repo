@@ -1,20 +1,23 @@
+// CODE
 
+aller/ INTRO
 :INTRO:
 CouleurC/ 2
 txt/  =====================================
 txt/  |              LOADING              |
 txt/  =_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=_=
 txt/  =====================================
-txt/  |             MakeBasic             |
-txt/  |          TeamX (c)  2020          |
+txt/  |             CoreSHELL             |
+txt/  |          TeamX (c)  2021          |
 txt/  =====================================
-txt/  Type /exit to exit MakeBasic.
+txt/  Type /exit to exit CoreSHELL.
+aller/ COMMAND
 
 :COMMAND:
-fix/ PROMPT = MKBSC/>
+fix/ PROMPT = CORE/>
 txt/ %PROMPT% /#R
 fix/ /Q COM
-fix/ VERSION = 0.1
+fix/ VERSION = 0.1.8
 
 if/ "%COM%" ~= "/SHOW" then:
     fix/ poscmd = /f:CPC.INSTR(%COM%,SHOW)
@@ -28,7 +31,7 @@ if/ "%poscmd%" > "0" then:
     fix/ /s COM
     fix/ /s poscmd
     fix/ /s args
-aller/ COMMAND
+    aller/ COMMAND
 end/ if
 
 if/ "%COM%" == "/CLS" then:
@@ -40,8 +43,8 @@ if/ "%COM%" == "/HELP" then:
     txt/ Showing the commands.
     txt/ /SHOW (Args)
     txt/ /CLS (Clear the screen)
-    txt/ /EXIT (Exit MakeBasic)
-    txt/ /VERSION (Shows MakeBasic version)
+    txt/ /EXIT (Exit CoreSHELL)
+    txt/ /VERSION (Shows CoreSHELL version)
     aller/ COMMAND
 end/ if
 
@@ -51,7 +54,7 @@ if/ "%COM%" == "/EXIT" then:
 end/ if
 
 if/ "%COM%" == "/VERSION" then:
-    txt/ MakeBasic version: %VERSION%
+    txt/ CoreSHELL version: %VERSION%
     aller/ INTRO
 end/ if
 

@@ -20,7 +20,7 @@ window/ Console_text
 	@#Handle_Fenetre creer/
 end/ window
 
-Textbox/ txt_console
+textbox/ txt_console
         .handle         = "%handle_fenetre%"
         .parameters     = "EDIT:1 MULTILINE:1 COL:1 CONSOLE:1"
         .px             = "1"
@@ -31,9 +31,9 @@ Textbox/ txt_console
         .TextColor      = "255,255,255"
         .text           = ""
 	Creer/
-end/ Textbox
+end/ textbox
 
-Function/ Console_text.Resize(up)
+function/ Console_text.Resize(up)
 
         sys/ /debug = 0
         // [FR] Recuperer la taile X et Y de la fenetre
@@ -58,7 +58,14 @@ Function/ Console_text.Resize(up)
         
         
 
-End/ function
+end/ function
+
+refresh/ /window /focus
+
+
+
+
+
 
 
 

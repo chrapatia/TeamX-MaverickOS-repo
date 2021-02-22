@@ -204,7 +204,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		rem/ .TitleColor		= "230,230,230"
 		.Parameters 	= "TYPE:0 ALPHAMODE:1"
 
-		.icon			= "OS/MEDIA/GUI/MSGBOX/%MSGBOX_ICOM%"
+		.icon			= "OS/MAVERICK/MEDIA/GUI/MSGBOX/%MSGBOX_ICO%"
 		
 		@#Handle_number Create/
 
@@ -235,7 +235,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 	IF/ "%MSGBOX_ICO%" != "0" then:
 		Picturebox/ picturebox_%window_name%
 			.handle			= "%Handle_number%"
-			.Image			= "OS/MEDIA/GUI/MSGBOX/%MSGBOX_ICO%"
+			.Image			= "OS/MAVERICK/MEDIA/GUI/MSGBOX/%MSGBOX_ICOM%"
 			
 			.PX				= "10"
 			.PY				= "20"
@@ -255,7 +255,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// OK
 		Button/ OK_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_BTN%"
 			.text				= "OK"
 			
 			// [EN] IMGAUTO:2 for stretch image
@@ -282,7 +282,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// YES/OUI
 		Button/ YES_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_YES_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_YES_BTN%"
 			
 			// [EN] IMGAUTO:2 for stretch image
 			// [FR] IMGAUTO:2 pour etirer l'image
@@ -312,7 +312,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// NO/NON
 		Button/ NO_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_NO_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_NO_BTN%"
 			
 			// [EN] IMGAUTO:2 for stretch image
 			// [FR] IMGAUTO:2 pour etirer l'image
@@ -350,7 +350,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// YES/OUI
 		Button/ YES_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_YES_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_YES_BTN%"
 			
 			// [EN] IMGAUTO:2 for stretch image
 			// [FR] IMGAUTO:2 pour etirer l'image
@@ -381,7 +381,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// NO/NON
 		Button/ NO_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_NO_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_NO_BTN%"
 			
 			// [EN] IMGAUTO:2 for stretch image
 			// [FR] IMGAUTO:2 pour etirer l'image
@@ -412,7 +412,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// CANCEL/ANULER
 		Button/ CANCEL_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_CANCEL_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_CANCEL_BTN%"
 			
 			// [EN] IMGAUTO:2 for stretch image
 			// [FR] IMGAUTO:2 pour etirer l'image
@@ -448,7 +448,7 @@ Function/ GUI.MSGBOX(Message, Title, Error_Type, Type_Message, exe_event, window
 		// OK
 		Button/ OK_button_%window_name%
 			.handle 			= "%handle_number%"
-			.Image				= "OS/MEDIA/GUI/BUTTONS/%MSGBOX_BTN%"
+			.Image				= "OS/MAVERICK/MEDIA/GUI/BUTTONS/%MSGBOX_BTN%"
 			.text				= "OK"
 			
 			// [EN] IMGAUTO:2 for stretch image

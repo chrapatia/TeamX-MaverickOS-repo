@@ -40,7 +40,7 @@ end/ window
 
 window/ dockWindow
     .title = ""
-    .parameters = "TYPE:4 CTN:1 BORD:0"
+    .parameters = "TYPE:4 CTN:1 BORD:0 OMBRE:0"
     .px = "%posx%"
     .py = "%posy%"
     .sx = "300"
@@ -154,8 +154,38 @@ button/ menudockBtn
     create/
 end/ button
 
+FIX/ POSX_TASKBAR = 150
+fix/ SX_TASKBAR = /C(%CPC.SCR.X%-150)
+
+window/ TASKBAR
+	.title 			= "TASKBAR"
+	.px				= "%POSX_TAKSBAR%"
+	.py				= "0"
+	.SX				= "%SX_TASKBAR%"
+	.SY				= "19"
+	.Opacity 		= "100"
+	.parameters		= "TYPE:5 CTN:1 BORD:0 OMBRE:0 TASKBAR:1"
+	.windowcolor	= "050,050,100"
+	.titlecolor		= "255,255,255"
+	.backcolor		= "255,255,050"
+	.event			= ""
+	@#Taskbar_handle create/
+end/ window
+
+picturebox/ TASKBAR_PNG
+	.Handle			= "%Taskbar_handle%"
+	.parameters		= "IMGAUTO:2"
+	.PX				= "0"
+	.PY				= "0"
+	.SX				= "%SX_TASKBAR%"
+	.SY				= "21"
+	.Image			= "%OS_GUI%/BAR_MENU.PNG"
+	.event			= ""
+	create/
+end/ Picturebox
+
 rem/ Event (Clicked button)
-function/ menudockBtn.mouseclick()
+function/ menudockBtn.Click()
 
     exe/ & OS/MAVERICK/SYSAPPS/MENU/menu.cpc
 

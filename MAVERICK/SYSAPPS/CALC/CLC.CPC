@@ -1,4 +1,8 @@
+// CODE
+
+
 set/ data = \#NULL
+set/ file = %_ARG_1%
 
 window/ calc
     .title = "Calculator"

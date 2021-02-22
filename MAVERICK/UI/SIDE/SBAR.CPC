@@ -44,5 +44,33 @@ textblock/ time_side
 	create/
 end/ textblock
 
+textbox/ txt_side
+    .handle			= "%side%"
+	.parameters 	= "EDIT:1 COL:1 MULTILINES:1"
+	.PX				= "0"
+	.PY				= "34"
+	.sx				= "150"
+	.sy				= "70"
+	.BackColor  	= "030,030,030"
+	.TextColor		= "255,255,255"
+    .text           = "%sbarnote%"
+	.event			= "%_exe_path_%"
+    create/
+end/ textbox
+
+function/ txt_side.KeyPress()
+
+	if/ "%KeyPress%" = " " then:
+
+		textbox/ /modif:txt_side
+			@#content .text
+			.text = ""
+			create/
+		end/ textbox
+
+	end/ if
+
+end/ function
+
 
 

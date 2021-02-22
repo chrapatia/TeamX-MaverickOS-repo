@@ -1,6 +1,6 @@
 // This file allow to execute CPC format file
 
-msgbox/ Fichier texte a ouvrir : '%_ARG_1%'
+msgbox/ PLACEHOLDER! It should normally (in the final release) open Notepad with the argument in file.
 
 
 
