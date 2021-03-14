@@ -3,7 +3,7 @@
 rem/ set the positions variables
 set/ posx = /C((%CPC.SCR.X% / 2) - (300 / 2))
 set/ posy = /C(%CPC.SCR.Y% - 100)
-set/ lposx = /C(%posx% - 250)
+set/ lposx = /C(%posx% - 240)
 set/ rposx = /C(%posx% + 300)
 set/ sposy = /C(%CPC.SCR.Y% - 85)
 
@@ -13,7 +13,7 @@ window/ left_dockWindow
     .parameters = "TYPE:4 CTN:1 BORD:0"
     .px = "%lposx%"
     .py = "%sposy%"
-    .sx = "250"
+    .sx = "240"
     .sy = "85"
     .WindowColor = "000,000,000"
     .BackColor = "043,043,043"
@@ -28,7 +28,7 @@ window/ right_dockWindow
     .parameters = "TYPE:4 CTN:1 BORD:0"
     .px = "%rposx%"
     .py = "%sposy%"
-    .sx = "250"
+    .sx = "240"
     .sy = "85"
     .WindowColor = "000,000,000"
     .BackColor = "043,043,043"
@@ -48,7 +48,7 @@ window/ dockWindow
     .WindowColor = "000,000,000"
     .BackColor = "198,198,198"
     .TitleColor = "000,000,000"
-    rem/ .ImgTitre = ""
+    rem/ .ImgTitle = ""
     rem/ .Icon = ""
     @#dock_ref create/
 end/ window
@@ -82,6 +82,20 @@ button/ testldockBtn_2
     create/
 end/ button
 
+button/ testldockBtn_3
+    .handle = "%ldock_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "160"
+    .py = "0"
+    .sx = "80"
+    .sy = "85"
+    .text = "C"
+    .BackColor = "198,198,198"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
+
 rem/ Create the UI (for right_dockwindow)
 button/ testldockBtn_1
     .handle = "%rdock_ref%"
@@ -90,7 +104,7 @@ button/ testldockBtn_1
     .py = "0"
     .sx = "80"
     .sy = "85"
-    .text = "C"
+    .text = "D"
     .BackColor = "198,198,198"
     .TextColor = "000,000,000"
     .event = "%_exe_path_%"
@@ -104,7 +118,21 @@ button/ testldockBtn_2
     .py = "0"
     .sx = "80"
     .sy = "85"
-    .text = "D"
+    .text = "E"
+    .BackColor = "198,198,198"
+    .TextColor = "000,000,000"
+    .event = "%_exe_path_%"
+    create/
+end/ button
+
+button/ testldockBtn_3
+    .handle = "%rdock_ref%"
+    .parameters = "IMGAUTO:0"
+    .px = "160"
+    .py = "0"
+    .sx = "80"
+    .sy = "85"
+    .text = "F"
     .BackColor = "198,198,198"
     .TextColor = "000,000,000"
     .event = "%_exe_path_%"
@@ -157,8 +185,8 @@ end/ button
 FIX/ POSX_TASKBAR = 150
 fix/ SX_TASKBAR = /C(%CPC.SCR.X%-150)
 
-window/ TASKBAR
-	.title 			= "TASKBAR"
+window/ Taskbar
+	.title 			= "Taskbar"
 	.px				= "%POSX_TAKSBAR%"
 	.py				= "0"
 	.SX				= "%SX_TASKBAR%"

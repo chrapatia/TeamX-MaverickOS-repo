@@ -1,0 +1,28 @@
+declare/ plus() : Niveau(4)
+declare/ multi() : Niveau(4)
+declare/ minus() : Niveau(4)
+declare/ div() : Niveau(4)
+
+function/ plus(var1, var2)
+
+    return/ /C(%var2% + %var2%)
+
+end/ function
+
+function/ multi(var1, var2)
+
+    return/ /C(%var2% * %var2%)
+
+end/ function
+
+function/ minus(var1, var2)
+
+    return/ /C(%var2% - %var2%)
+
+end/ function
+
+function/ div(var1, var2)
+
+    return/ /C(%var2% / %var2%)
+
+end/ function

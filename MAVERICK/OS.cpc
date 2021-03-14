@@ -6,13 +6,14 @@ rem/ sys/ /os:MAVERICK
 // Graphic profile
 rem/ exe/ & %CPC.REP.KRNL%/CONFIG/ENV_GUI/env_gui.cpc
 exe/ & OS/MAVERICK/CONFIG/ENV_GUI/ENV_GUI.CPC
+exe/ & OS/MAVERICK/CONFIG/NEWC.CPC
 
 ccp/ /fix.niveau = 4
 
-set/ HOST_OS = OS/MAVERICK
-set/ MEDIA_OS = %HOST_OS%/MEDIA
+set/ HOST_OS = OS\MAVERICK
+set/ MEDIA_OS = %HOST_OS%\MEDIA
 
-set/ GUI_OS = %MEDIA_OS%/GUI
+set/ GUI_OS = %MEDIA_OS%\GUI
 
 rem/ exe/ & %HOST_OS%/CONFIG/ENV_GUI/ENV_GUI.CPC
 

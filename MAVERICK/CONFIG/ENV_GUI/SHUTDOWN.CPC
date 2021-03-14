@@ -1,0 +1,8 @@
+// CODE
+CCP/ /SET.LEVEL = 3
+
+Declare/ Shutdown() : LEVEL(3)
+
+Function/ Shutdown()
+    stopk/
+end/ Function

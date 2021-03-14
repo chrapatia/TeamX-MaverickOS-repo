@@ -16,7 +16,7 @@ set/ cpc_sys.boot.bootscreen.scr_res = 800x600
 
 // [FR] Nombre d'images par secondes (IPS)
 // [EN] Number frames per seconds (FPS)
-set/ cpc_sys.boot.bootscreen.fps = 8
+set/ cpc_sys.boot.bootscreen.fps = 10
 
 
 // [FR] Nombre d'images max
